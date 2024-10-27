@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
-const oddsSchema = new mongoose.Schema({
+const bettingDataSchema = new mongoose.Schema({
     teamName: {
         type: String,
         required: true,
@@ -14,20 +14,8 @@ const oddsSchema = new mongoose.Schema({
             odds: {
                 type: Number,
                 required: true,
-            }
-        }
-    ],
-    total: [
-        {
-            sportsbook: {
-                type: String,
-                required: true,
             },
-            odds: {
-                type: Number,
-                required: true,
-            }
-        }
+        },
     ],
     spread: [
         {
@@ -36,13 +24,17 @@ const oddsSchema = new mongoose.Schema({
                 required: true,
             },
             odds: {
-                type: Number,
+                type: String,
                 required: true,
-            }
-        }
-    ]
+            },
+            point: {
+                type: String,
+                required: true,
+            },
+        },
+    ],
 });
 
-const OddsModel = mongoose.model('Odds', oddsSchema);
+const BettingData = mongoose.model('BettingData', bettingDataSchema);
 
-module.exports = OddsModel; 
+export default BettingData

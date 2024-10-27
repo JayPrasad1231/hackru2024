@@ -1,6 +1,8 @@
-const express = require('express');
-const { connectDB, closeDB } = require('./config');
-const routes = require('./routes');
+import express from 'express';
+import { connectDB } from './config.js'; // Ensure to add .js extension
+import routes from './routes.js'; // Ensure to add .js extension
+
+console.log("hey");
 
 const app = express();
 const PORT = process.env.PORT || 3000;

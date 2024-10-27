@@ -1,4 +1,7 @@
-const { MongoClient, ServerApiVersion } = require('mongodb');
+import dotenv from 'dotenv';
+import { MongoClient, ServerApiVersion } from 'mongodb';
+
+dotenv.config();
 
 const client = new MongoClient(process.env.MONGO_URI, {
   serverApi: {
@@ -7,6 +10,8 @@ const client = new MongoClient(process.env.MONGO_URI, {
     deprecationErrors: true,
   },
 });
+
+console.log("Mongo URI:", process.env.MONGO_URI);
 
 async function connectDB() {
   try {
@@ -18,5 +23,5 @@ async function connectDB() {
     process.exit(1);
   }
 }
-  
-module.exports = { connectDB, client };
+
+export default connectDB;
