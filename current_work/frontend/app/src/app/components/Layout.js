@@ -45,7 +45,7 @@ const Layout = ({ children }) => {
 
         {/* Navbar */}
         {isNavVisible && (
-          <div className="absolute left-0 top-0 bg-stone-900 p-4 w-40 rounded-lg shadow-lg z-50">
+          <div className="absolute left-0 top-0 bg-stone-900 p-4 w-60 rounded-lg shadow-lg z-50"> {/* Increased width to w-60 */}
             <button className="font-bold text-2xl text-red-400 rounded mb-4" onClick={() => router.push('/')}>
               Gambling Guru
             </button>
@@ -53,7 +53,7 @@ const Layout = ({ children }) => {
               {buttonData.map((button, index) => (
                 <button
                   key={index}
-                  className="text-stone-900 bg-red-400 p-3 rounded-lg"
+                  className="text-stone-900 bg-red-400 p-3 rounded-lg w-full" // Full width for buttons
                   onClick={() => router.push(button.path)}
                 >
                   {button.label}
