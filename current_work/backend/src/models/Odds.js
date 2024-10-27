@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const oddsSchema = new mongoose.Schema({
     teamName: {
@@ -45,4 +45,5 @@ const oddsSchema = new mongoose.Schema({
 
 const OddsModel = mongoose.model('Odds', oddsSchema);
 
-module.exports = OddsModel; 
+// Use default export
+export default OddsModel;

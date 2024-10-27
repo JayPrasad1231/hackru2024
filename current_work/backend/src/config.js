@@ -1,5 +1,7 @@
-require('dotenv').config();
-const { MongoClient, ServerApiVersion } = require('mongodb');
+import dotenv from 'dotenv';
+import { MongoClient, ServerApiVersion } from 'mongodb';
+
+dotenv.config();
 
 const client = new MongoClient(process.env.MONGO_URI, {
   serverApi: {
@@ -9,7 +11,7 @@ const client = new MongoClient(process.env.MONGO_URI, {
   },
 });
 
-async function connectDB() {
+export async function connectDB() {
   try {
     await client.connect();
     await client.db("admin").command({ ping: 1 });
@@ -20,4 +22,4 @@ async function connectDB() {
   }
 }
 
-module.exports = { connectDB, client };
+

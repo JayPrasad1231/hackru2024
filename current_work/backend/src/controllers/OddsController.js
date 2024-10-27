@@ -1,5 +1,5 @@
-const axios = require('axios');
-const BettingData = require('../models/OddsModel'); // Update the path as necessary
+import axios from 'axios';
+import BettingData from '../models/Odds.js';
 
 class Tuple {
     constructor(first, second) {
@@ -38,8 +38,9 @@ class Triple {
     }
 }
 
-const fetchOddsData = async (req, res) => {
+export const fetchOddsData = async (req, res) => {
     try {
+        console.log("howdy");
         const apiKey = process.env.ODDS_API_KEY; // Ensure you store your API key in .env
         const url = `https://api.the-odds-api.com/v4/sports/americanfootball_nfl/odds/?apiKey=${apiKey}&regions=us&markets=h2h,spreads,totals&oddsFormat=american`;
         const response = await axios.get(url);
@@ -51,6 +52,7 @@ const fetchOddsData = async (req, res) => {
 
         response.data.forEach(game => {
             const bookmakers = game.bookmakers;
+            console.log(bookmakers);
             const home_team = game.home_team;
             const away_team = game.away_team;
             games.push(new Tuple(home_team, away_team));
@@ -170,5 +172,3 @@ const fetchOddsData = async (req, res) => {
         res.status(500).json({ error: 'Failed to fetch odds data' }); // Correct error response
     }
 };
-
-module.exports = { fetchOddsData };
