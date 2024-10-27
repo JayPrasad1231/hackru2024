@@ -1,5 +1,5 @@
 import express from 'express';
-import { connectDB } from './config.js'; // Ensure to add .js extension
+// import { connectDB } from './config.js'; // Ensure to add .js extension
 import routes from './routes.js'; // Ensure to add .js extension
 import cors from 'cors';
 
@@ -19,7 +19,7 @@ app.use('/api', routes);
 
 
 
-connectDB(); // Call the connectDB function here
+// connectDB(); // Call the connectDB function here
 console.log(process.env.PORT);
 
 const server = app.listen(PORT, () => {

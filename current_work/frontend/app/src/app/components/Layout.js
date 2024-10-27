@@ -5,12 +5,16 @@ import React from 'react';
 import { useRouter } from 'next/navigation';
 
 const buttonData = [
-  { label: "Kelley Criterion", path: "/test" },
-  { label: "EV Betting Tips", path: "/ev" },
-  { label: "Matched Betting Tips", path: "/matched" },
-  { label: "Arbitrage Betting", path: "/arbitrage" },
-  { label: "Low Hold Betting", path: "/lowHold" },
-  { label: "VIP Program", path: "/vip" },
+  { label: "Intro to Sports Betting", path: "/ev" },
+  { label: "Odds and Probability", path: "/matched" },
+  { label: "EV Betting", path: "/arbitrage" },
+  { label: "EV Betting Part 2!", path: "/lowHold" },
+  { label: "Arbitrage", path: "/vip" },
+  { label: "Free & Bonus Bets", path: "/test" },
+  { label: "Bankroll Management", path: "/kellycriterion"},
+  { label: "Final EV Lesson!", path: "/moreEV"},
+  { label: "Account Health", path: "/acctHealth"},
+  { label: "Advanced Sports Betting", path: "/advanced"},
   { label: "Authors", path: "/authors" },
 ];
 
