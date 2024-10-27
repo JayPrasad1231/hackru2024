@@ -5,8 +5,8 @@ import { useRouter } from 'next/navigation'
 
 const buttonData = [
   { label: "Kelley Criterion", path: "/test" },
-  { label: "EV Betting Tips", path: "/test" },
-  { label: "Matched Betting Tips", path: "/test" },
+  { label: "EV Betting Tips", path: "/ev" },
+  { label: "Matched Betting Tips", path: "/matched" },
   { label: "Arbitrage Betting", path: "/test" },
   { label: "Low Hold Betting", path: "/test" },
   { label: "VIP Program", path: "/test" },
