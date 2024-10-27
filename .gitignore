@@ -2,3 +2,4 @@ venv/
 full_dataset.csv
 .env
 node_modules
+current_work/frontend/app/node_modules
