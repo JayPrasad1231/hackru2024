@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 const buttonData = [
+  { label: "Current Odds!", path: "/odds"},
   { label: "Intro to Sports Betting", path: "/ev" },
   { label: "Odds and Probability", path: "/matched" },
   { label: "EV Betting", path: "/arbitrage" },
