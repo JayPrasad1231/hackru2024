@@ -1,4 +1,3 @@
-require('dotenv').config();
 const { MongoClient, ServerApiVersion } = require('mongodb');
 
 const client = new MongoClient(process.env.MONGO_URI, {
@@ -19,5 +18,5 @@ async function connectDB() {
     process.exit(1);
   }
 }
-
+  
 module.exports = { connectDB, client };
