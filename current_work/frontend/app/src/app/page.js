@@ -8,9 +8,9 @@ const buttonData = [
   { label: "EV Betting Tips", path: "/ev" },
   { label: "Matched Betting Tips", path: "/matched" },
   { label: "Arbitrage Betting", path: "/arbitrage" },
-  { label: "Low Hold Betting", path: "/test" },
-  { label: "VIP Program", path: "/test" },
-  { label: "Authors", path: "/test" },
+  { label: "Low Hold Betting", path: "/lowHold" },
+  { label: "VIP Program", path: "/vip" },
+  { label: "Authors", path: "/authors" },
 ];
 
 export default function Home() {

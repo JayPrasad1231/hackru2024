@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 
 
 
-export default function Arbitrage() {
+export default function VIP() {
     const router = useRouter()
     
     return (
@@ -15,7 +15,7 @@ export default function Arbitrage() {
           </div>
         
         <div className="flex items-center justify-center min-h-screen bg-stone-800">
-          <h1 className="text-2xl font-bold">Welcome to the Arbitrage Page!</h1>
+          <h1 className="text-2xl font-bold">Welcome to the VIP Page!</h1>
         </div>
       </div>
     );
